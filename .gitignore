@@ -14,3 +14,8 @@ __pycache__/
 
 # Publishing the live copy is done privately by the maintainers.
 deploy.sh
+
+# Maintainer-only notes and tools that are not published.
+local/
+
+.DS_Store

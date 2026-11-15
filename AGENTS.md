@@ -8,6 +8,10 @@ This is the only place the rules are written. `CLAUDE.md`, `GEMINI.md` and `.git
 
 Shipwreck Explorer: a browser 3D model of the RMS Titanic wreck site, generated entirely by code and shipped as one self-contained `index.html` (WebGPU, no engine, no image or model files). The aim is to be as close to the real wreck as public sources allow.
 
+## Start here
+
+Read [`docs/STATUS.md`](docs/STATUS.md) before doing anything: it says where the project stands, what has and has not been checked, and what comes next. Update it at the end of a session that changes any of that. Run `git fetch` first and make sure no other session is committing in this repository at the same time.
+
 ## Rules that always apply
 
 ### 1. Keep the prompt log (private) and the decision log (committed) up to date
