@@ -247,7 +247,7 @@ if (hasTS) {
 
 // ---------------------------------------------------------------- frame
 let hud = false;
-let kf = 0, kb = 0, kl = 0, kr = 0, ku = 0, kd = 0, ks = 0, mdx = 0, mdy = 0, lkx = 0, lky = 0, l2x = 0, l2y = 0, hN = 0, hMax = 0, hMin = 1e9, hPer = 1e9, hLate = 0, hTot = 0, tId = -1, tN = 0, tx0 = 0, ty0 = 0, tx = 0, ty = 0;
+let kf = 0, kb = 0, kl = 0, kr = 0, ku = 0, kd = 0, ks = 0, mdx = 0, mdy = 0, lkx = 0, lky = 0, l2x = 0, l2y = 0, hN = 0, hMax = 0, hMin = 1e9, hPer = 1e9, hLate = 0, hTot = 0, tId = null, tN = 0, tx0 = 0, ty0 = 0, tx = 0, ty = 0;
 // EXPO: exposure, RAYS: how much lamp light the water scatters back, LAMPI: lamp power
 const TANH = 0.6, NEAR = 0.1, EXPO = 1.0, RAYS = 0.0006, LAMPI = 520;
 const submitList = [null];
@@ -451,7 +451,7 @@ function frame(now) {
   F[TIME] += dt;
   {
     // touch: holding the finger away from where it went down keeps turning, like a joystick
-    if (tId >= 0) {
+    if (tId !== null) {
       const tr = 4 / (innerWidth < innerHeight ? innerWidth : innerHeight); let jx = (tx - tx0) * tr, jy = (ty - ty0) * tr;
       jx = jx > 1 ? 1 : jx < -1 ? -1 : jx; jy = jy > 1 ? 1 : jy < -1 ? -1 : jy;
       lkx += jx * 1.5 * dt; lky += jy * dt;
@@ -462,7 +462,7 @@ function frame(now) {
     const dyw = l2x * kq, dpt = l2y * kq; l2x -= dyw; l2y -= dpt;
     const yaw = F[YAW] + dyw; let pitch = F[PIT] - dpt; pitch = pitch < -1.55 ? -1.55 : pitch > 1.55 ? 1.55 : pitch;
     // a submersible is slow: 3 m/s, 14 m/s with Shift to cross between the hull sections
-    const sp = ks || tN > 1 ? 14 : 3, k = 1 - exp(-dt * 3), mf = tId >= 0 ? 0.7 : kf - kb, mr = kr - kl, mu = ku - kd, cp = cos(pitch), sy = sin(yaw), cw = cos(yaw);
+    const sp = ks || tN > 1 ? 14 : 3, k = 1 - exp(-dt * 3), mf = tId !== null ? 0.7 : kf - kb, mr = kr - kl, mu = ku - kd, cp = cos(pitch), sy = sin(yaw), cw = cos(yaw);
     const vx = F[VX] + ((sy * cp * mf + cw * mr) * sp - F[VX]) * k, vy = F[VY] + ((sin(pitch) * mf + mu) * sp - F[VY]) * k, vz = F[VZ] + ((-cw * cp * mf + sy * mr) * sp - F[VZ]) * k;
     let x = F[CX] + vx * dt, y = F[CY] + vy * dt, z = F[CZ] + vz * dt;
     const rad = sqrt(x * x + z * z); if (rad > REACH) { x *= REACH / rad; z *= REACH / rad; }
@@ -501,15 +501,16 @@ const key = (e, v) => {
 // behind the menu only the stats and mute keys work
 addEventListener('keydown', (e) => { if (menu && e.code !== 'KeyH' && e.code !== 'KeyM') return; sound(); key(e, 1); });
 addEventListener('keyup', (e) => key(e, 0));
-const release = () => { kf = kb = kl = kr = ku = kd = ks = 0; tId = -1; tN = 0; };
+const release = () => { kf = kb = kl = kr = ku = kd = ks = 0; tId = null; tN = 0; };
 const capture = () => { sound(); const p = canvas.requestPointerLock({ unadjustedMovement: true }); if (p && p.catch) p.catch(() => canvas.requestPointerLock()).catch(() => 0); };
 canvas.addEventListener('click', capture);
 addEventListener('mousemove', (e) => { if (document.pointerLockElement === canvas) { mdx += e.movementX; mdy += e.movementY; } });
 addEventListener('blur', release);
+// tId is the steering finger's id, null when no finger is down. Not -1: iOS Safari hands out negative ids.
 const touch = (e) => {
   e.preventDefault(); sound(); tN = e.touches.length;
   let f = null, first = false; for (let i = 0; i < tN; i++) if (e.touches[i].identifier === tId) f = e.touches[i];
-  if (!f) { tId = -1; if (tN) { f = e.touches[0]; tId = f.identifier; first = true; } }
+  if (!f) { tId = null; if (tN) { f = e.touches[0]; tId = f.identifier; first = true; } }
   if (f) {
     // the touch axes turn with the page when it lies on its side
     const x = rot.matches ? f.clientY : f.clientX, y = rot.matches ? -f.clientX : f.clientY, s = 1100 / min(innerWidth, innerHeight);
