@@ -91,3 +91,12 @@ How to add an entry is in [`AGENTS.md`](../AGENTS.md).
 - **Why:** A community-driven project needs a public home where people can read the sources log, the decisions and the code, and contribute.
 - **What it led to:** The repository `optional-org/shipwreck-explorer`. The upstream Abyssal Garden history is kept underneath this project's commits.
 - **Commits:** `27da0a0` Turn Abyssal Garden into Shipwreck Explorer: the Titanic wreck
+
+## D011: Name Optional Ltd in the licence
+
+- **Date:** 15 November 2026
+- **Decided by:** Nathan (project owner)
+- **Decision:** Add a copyright line for Optional Ltd to `LICENSE`, beneath the line for the author of Abyssal Garden, which stays. The licence remains MIT.
+- **Why:** The licence named only the upstream author. The work added on top of Abyssal Garden carried no notice of who holds it. This came out of a check of the public repository for anything that should not be in it.
+- **Alternatives:** Leaving the licence as it was. The new work is protected either way, but who holds it was not stated.
+- **What it led to:** The second line in `LICENSE`. The same check removed a link to a private assistant session from two commit messages, which changed their hashes.
