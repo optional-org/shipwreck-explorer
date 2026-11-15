@@ -100,3 +100,4 @@ How to add an entry is in [`AGENTS.md`](../AGENTS.md).
 - **Why:** The licence named only the upstream author. The work added on top of Abyssal Garden carried no notice of who holds it. This came out of a check of the public repository for anything that should not be in it.
 - **Alternatives:** Leaving the licence as it was. The new work is protected either way, but who holds it was not stated.
 - **What it led to:** The second line in `LICENSE`. The same check removed a link to a private assistant session from two commit messages, which changed their hashes.
+- **Commits:** `3766171` Name Optional Ltd in the licence
