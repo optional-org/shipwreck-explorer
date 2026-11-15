@@ -120,3 +120,13 @@ How to add an entry is in [`AGENTS.md`](../AGENTS.md).
 - **Why:** Optional created and maintains this project and hosts the live copy. The original author is still credited for the renderer it is built on, as the MIT licence asks.
 - **What it led to:** A larger credit line above the existing one in the menu, and a link to this repository beside the upstream credit. The credit is in the page itself, so downloaded copies show it too.
 - **Commits:** `c80f8c1` Add the live link and the Optional credit; keep publishing private.
+
+## D013: Show screenshots in the README
+
+- **Date:** 15 November 2026
+- **Decided by:** Nathan (project owner)
+- **Decision:** Add screenshots of the model to the README, as the Abyssal Garden README does.
+- **Why:** A visitor to the repository should see what the explorer looks like before opening it. The upstream project's screenshots do this well.
+- **Alternatives:** Leaving the README as text with a link to the live copy. The rule against image files stands for the explorer itself: these files are documentation and nothing in `index.html` uses them.
+- **What it led to:** Six pictures in `.github/screenshots/`, the same place upstream keeps its own, each rendered from the model in headless Chrome. One opens the README and five sit after "Going inside".
+- **Commits:** not yet committed.
