@@ -100,7 +100,7 @@ How to add an entry is in [`AGENTS.md`](../AGENTS.md).
 - **Why:** A memorable address with room for more wrecks and other experiments beside it. Details of the hosting are private to Optional.
 - **Alternatives:** GitHub Pages. Free, and it redeploys on every merge, but it serves a repository at its own name, so that address would have needed a second repository to publish into.
 - **What it led to:** The live link in the README. A maintainer publishes after changes are merged; the live copy does not update on its own.
-- **Commits:** not yet committed
+- **Commits:** `fc4bde7` Add the live link and the Optional credit; keep publishing private
 
 ## D011: Credit Optional as creator and maintainer
 
@@ -109,4 +109,4 @@ How to add an entry is in [`AGENTS.md`](../AGENTS.md).
 - **Decision:** Show a link to Optional along the bottom of the explorer as its creator and maintainer, more prominent than the credit to the author of Abyssal Garden.
 - **Why:** Optional created and maintains this project and hosts the live copy. The original author is still credited for the renderer it is built on, as the MIT licence asks.
 - **What it led to:** A larger credit line above the existing one in the menu, and a link to this repository beside the upstream credit. The credit is in the page itself, so downloaded copies show it too.
-- **Commits:** not yet committed
+- **Commits:** `fc4bde7` Add the live link and the Optional credit; keep publishing private
