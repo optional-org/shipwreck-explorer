@@ -92,12 +92,21 @@ How to add an entry is in [`AGENTS.md`](../AGENTS.md).
 - **What it led to:** The repository `optional-org/shipwreck-explorer`. The upstream Abyssal Garden history is kept underneath this project's commits.
 - **Commits:** `27da0a0` Turn Abyssal Garden into Shipwreck Explorer: the Titanic wreck
 
-## D011: Name Optional Ltd in the licence
+## D010: Host the live copy under experiments.optional.org.uk
 
 - **Date:** 15 November 2026
 - **Decided by:** Nathan (project owner)
-- **Decision:** Add a copyright line for Optional Ltd to `LICENSE`, beneath the line for the author of Abyssal Garden, which stays. The licence remains MIT.
-- **Why:** The licence named only the upstream author. The work added on top of Abyssal Garden carried no notice of who holds it. This came out of a check of the public repository for anything that should not be in it.
-- **Alternatives:** Leaving the licence as it was. The new work is protected either way, but who holds it was not stated.
-- **What it led to:** The second line in `LICENSE`. The same check removed a link to a private assistant session from two commit messages, which changed their hashes.
-- **Commits:** `3766171` Name Optional Ltd in the licence
+- **Decision:** Publish the explorer at `experiments.optional.org.uk/shipwrecks/titanic/`, on Optional's own hosting. How it is hosted and published is kept out of the repository.
+- **Why:** A memorable address with room for more wrecks and other experiments beside it. Details of the hosting are private to Optional.
+- **Alternatives:** GitHub Pages. Free, and it redeploys on every merge, but it serves a repository at its own name, so that address would have needed a second repository to publish into.
+- **What it led to:** The live link in the README. A maintainer publishes after changes are merged; the live copy does not update on its own.
+- **Commits:** not yet committed
+
+## D011: Credit Optional as creator and maintainer
+
+- **Date:** 15 November 2026
+- **Decided by:** Nathan (project owner)
+- **Decision:** Show a link to Optional along the bottom of the explorer as its creator and maintainer, more prominent than the credit to the author of Abyssal Garden.
+- **Why:** Optional created and maintains this project and hosts the live copy. The original author is still credited for the renderer it is built on, as the MIT licence asks.
+- **What it led to:** A larger credit line above the existing one in the menu, and a link to this repository beside the upstream credit. The credit is in the page itself, so downloaded copies show it too.
+- **Commits:** not yet committed

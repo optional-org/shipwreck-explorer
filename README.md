@@ -6,10 +6,11 @@ The site is modelled at full scale from published measurements and the 1911 buil
 
 ## Try it
 
-1. Open [`index.html`](index.html) in **Chrome** or **Edge** on a desktop computer.
-2. Wait a few seconds while the site is built, then press **Dive**.
+**[experiments.optional.org.uk/shipwrecks/titanic](https://experiments.optional.org.uk/shipwrecks/titanic/)**
 
-Nothing to install, and it works offline. It needs a browser with **WebGPU**.
+Open it in **Chrome** or **Edge** on a desktop computer, wait a few seconds while the site is built, then press **Dive**. It needs a browser with **WebGPU**.
+
+You can also download [`index.html`](index.html) and open it directly: nothing to install, and it works offline.
 
 ## Controls
 
@@ -78,6 +79,8 @@ npm run build
 ```
 
 This writes a new `index.html` next to this README. `npm run build:readable` writes an unminified version, which is easier to debug.
+
+The live copy is published by a maintainer after changes are merged; it does not update on its own.
 
 | File | What's inside |
 |---|---|

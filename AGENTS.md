@@ -55,7 +55,7 @@ npm run build            # writes ../index.html, minified
 npm run build:readable   # unminified, for debugging
 ```
 
-Always finish with `npm run build` so the committed `index.html` matches the source. There are no automated tests. Check a change by loading the page in a WebGPU browser (Chrome or Edge), served from localhost or over HTTPS, and looking at it: use keys `1` to `9` and `[` `]` to jump between viewpoints, and `V` for the survey light.
+Always finish with `npm run build` so the committed `index.html` matches the source. The live copy at https://experiments.optional.org.uk/shipwrecks/titanic/ is published privately by the maintainers. Do not try to publish it, and do not add hosting or infrastructure details (providers, bucket or server names, ids, credentials, deploy scripts) to anything that is committed. There are no automated tests. Check a change by loading the page in a WebGPU browser (Chrome or Edge), served from localhost or over HTTPS, and looking at it: use keys `1` to `9` and `[` `]` to jump between viewpoints, and `V` for the survey light.
 
 ## Where things are
 

@@ -11,3 +11,6 @@ docs/prompts.jsonl
 docs/PROMPTS.md
 docs/decisions/
 __pycache__/
+
+# Publishing the live copy is done privately by the maintainers.
+deploy.sh

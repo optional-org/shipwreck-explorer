@@ -31,7 +31,7 @@ body:not(.g) canvas { filter: blur(1vmax) brightness(.5); transform: scale(1.06)
 /* menu: the loading bar and the buttons share one grid cell, so nothing jumps when they swap */
 #m {
   position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: min(2.2em, 6vmin);
-  padding: 1em 1em 4.5em; text-align: center; background: radial-gradient(#02080c00 30%, #02080ccc);
+  padding: 1em 1em 5.5em; text-align: center; background: radial-gradient(#02080c00 30%, #02080ccc);
   transition: opacity .5s, visibility .5s;
 }
 .g #m, .m #l, .l #g { opacity: 0; visibility: hidden; }
@@ -76,7 +76,9 @@ button:active, a:active { transform: translateY(.1em); filter: brightness(.9); }
 }
 
 /* credits: always at the bottom of the menu */
-#f { position: absolute; left: 0; right: 0; bottom: 1.5em; font-size: .7em; font-weight: 600; letter-spacing: .04em; color: #9fc4cc; }
+#f { position: absolute; left: 0; right: 0; bottom: 1.2em; font-size: .7em; font-weight: 600; letter-spacing: .04em; color: #9fc4cc; }
+#y { margin-bottom: .35em; font-size: 1.55em; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #e8fbff; }
+#y a { color: #7ff3ff; }
 #f a { display: inline; padding: 0; background: none; box-shadow: none; font: inherit; letter-spacing: inherit; text-transform: none; text-decoration: underline; color: #e8fbff; }
 
 /* dark plates under the dive button: detail level, list of controls, touch hint */
@@ -159,7 +161,10 @@ body:not(.g) #u, body:not(.g) #n, body:not(.g) #x { display: none; }
       <p id=h>Hold to move forward · slide to steer · second finger to go faster</p>
     </div>
   </div>
-  <p id=f>Modelled from public domain sources, listed in docs/SOURCES.md · Built on <a href=https://github.com/Noniv/abyssal-garden target=_blank>Abyssal Garden</a> by Maksymilian Dendura (MIT)</p>
+  <div id=f>
+    <p id=y>Created and maintained by <a href=https://optional.org.uk target=_blank>Optional</a></p>
+    <p>Modelled from public domain sources · <a href=https://github.com/optional-org/shipwreck-explorer target=_blank>Source and sources log on GitHub</a> · Built on <a href=https://github.com/Noniv/abyssal-garden target=_blank>Abyssal Garden</a> by Maksymilian Dendura (MIT)</p>
+  </div>
 </div>
 <button id=o aria-label=Menu>≡</button>
 <pre id=u></pre>
