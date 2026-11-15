@@ -129,4 +129,4 @@ How to add an entry is in [`AGENTS.md`](../AGENTS.md).
 - **Why:** A visitor to the repository should see what the explorer looks like before opening it. The upstream project's screenshots do this well.
 - **Alternatives:** Leaving the README as text with a link to the live copy. The rule against image files stands for the explorer itself: these files are documentation and nothing in `index.html` uses them.
 - **What it led to:** Six pictures in `.github/screenshots/`, the same place upstream keeps its own, each rendered from the model in headless Chrome. One opens the README and five sit after "Going inside".
-- **Commits:** not yet committed.
+- **Commits:** `8938d9d` Add screenshots to the README
