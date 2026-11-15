@@ -17,7 +17,7 @@ How to add an entry is in [`AGENTS.md`](../AGENTS.md).
 - **Decision:** Start from the open-source Abyssal Garden project (MIT licence) and turn it into an interactive shipwreck explorer. The first wreck is the Titanic, as close to reality as public information allows. Keep a folder of reference material, which need not be committed, and a committed log of what is used where, with links. Use only public domain material and credit every source.
 - **Why:** Abyssal Garden already had a working underwater WebGPU renderer. Limiting the project to public domain material and logging every source keeps it legally clean and lets others check the work.
 - **What it led to:** `docs/SOURCES.md`, the gitignored `reference/` folder, the upstream credit in the README and menu.
-- **Commits:** not yet committed
+- **Commits:** `27da0a0` Turn Abyssal Garden into Shipwreck Explorer: the Titanic wreck
 
 ## D002: Realistic darkness, the whole site at true scale, modelled in code
 
@@ -26,7 +26,7 @@ How to add an entry is in [`AGENTS.md`](../AGENTS.md).
 - **Decision:** Light the scene only with the submersible's lamps, as at the real depth, with a clearly labelled survey light that is not real. Enlarge the world to about 1.1 km so the bow and stern lie at their true distance and bearing. Generate the wreck in code from sourced measurements and the 1911 plans.
 - **Why:** The brief was to be as real as possible using only public domain material. No public domain 3D scan or photograph of the wreck exists, but measurements and facts can be cited freely.
 - **Alternatives:** Visible artistic lighting only; the bow alone in the original small world; importing a scan or photo textures (none are public domain).
-- **Commits:** not yet committed
+- **Commits:** `27da0a0` Turn Abyssal Garden into Shipwreck Explorer: the Titanic wreck
 
 ## D003: More detail, sea life, a ship you can swim through, and a mini map
 
@@ -35,7 +35,7 @@ How to add an entry is in [`AGENTS.md`](../AGENTS.md).
 - **Decision:** The first build was too sparse. The explorer should be much more detailed, have marine life, let you go inside the different parts of the ship, and show a mini map of where you are on the wreck.
 - **Why:** The first build was a hull you could only circle, with nothing living and no way to tell where you were.
 - **What it led to:** The hollow bow with collision on plating, decks and bulkheads and passage through real openings; the animals recorded at the wreck; the mini map; the bow's real bends.
-- **Commits:** not yet committed
+- **Commits:** `27da0a0` Turn Abyssal Garden into Shipwreck Explorer: the Titanic wreck
 
 ## D004: Sea life is denser than the real wreck, with the white animals cut back
 
@@ -44,7 +44,7 @@ How to add an entry is in [`AGENTS.md`](../AGENTS.md).
 - **Decision:** Keep the raised numbers of animals, which are well above what surveys report, so that life is visible in the lamp light. Later the same day: reduce the white ones (anemones, squat lobsters, whip corals), which were too many.
 - **Why:** At realistic numbers you could cross the wreck without seeing anything alive. The white animals then dominated the decks.
 - **What it led to:** The density is listed under "Known approximations" in `docs/SOURCES.md`.
-- **Commits:** not yet committed
+- **Commits:** `27da0a0` Turn Abyssal Garden into Shipwreck Explorer: the Titanic wreck
 
 ## D005: Model the rooms and machinery that still exist
 
@@ -53,7 +53,7 @@ How to add an entry is in [`AGENTS.md`](../AGENTS.md).
 - **Decision:** Make the interior worth exploring and true to the wreck: the rooms that are still there, and the engine room and any other machinery that remains.
 - **Why:** Empty decks are not the real wreck. The engines and other mechanical parts are among the most interesting things left.
 - **What it led to:** Research into what dives have found inside. Only reported survivals are modelled: the lift trunk, the D deck reception room and open gangway door, Scotland Road, the Turkish bath cooling room, the Marconi set, the captain's bath, the boilers, and the two reciprocating engines at the stern. Unseen machinery (turbine, dynamos, steering gear) is left out.
-- **Commits:** not yet committed
+- **Commits:** `27da0a0` Turn Abyssal Garden into Shipwreck Explorer: the Titanic wreck
 
 ## D006: Work through the rough parts
 
@@ -62,7 +62,7 @@ How to add an entry is in [`AGENTS.md`](../AGENTS.md).
 - **Decision:** Improve the parts flagged as rough after D005: bare rooms, the plain Marconi set and bath, simplified engines, plain steel surfaces.
 - **Why:** These were the gaps between the model and what the sources describe.
 - **What it led to:** Panelling, tiles and leaded glass; a detailed Marconi set and bath; plate seams and rivets. The engines were rebuilt to measurements taken from the builder's 1911 machinery plates, which were added to the reference folder and the sources log.
-- **Commits:** not yet committed
+- **Commits:** `27da0a0` Turn Abyssal Garden into Shipwreck Explorer: the Titanic wreck
 
 ## D007: Keep the prompts private and publish the reasoning
 
@@ -71,7 +71,7 @@ How to add an entry is in [`AGENTS.md`](../AGENTS.md).
 - **Decision:** Aim for a community-driven project. Keep a log of every prompt behind the build, maintained whenever work is done, with the rule written into the project's assistant instructions so other contributors follow it. The exact prompts are not committed. They are used to write this decision log, which is committed, tied to commits, and records the reasoning and choices without quoting anyone.
 - **Why:** The history of how the project was directed will be asked for when it goes public and gives contributors context. Publishing people's raw prompts, typos and all, would not respect them; the reasoning is what matters.
 - **What it led to:** `scripts/export-prompts.py`, the gitignored `docs/prompts.jsonl` and `docs/PROMPTS.md`, this file, and the rules in `AGENTS.md`.
-- **Commits:** not yet committed
+- **Commits:** `27da0a0` Turn Abyssal Garden into Shipwreck Explorer: the Titanic wreck
 
 ## D008: One set of rules for every AI assistant
 
@@ -81,7 +81,7 @@ How to add an entry is in [`AGENTS.md`](../AGENTS.md).
 - **Why:** A community project will have contributors on different assistants, and the sourcing, decision log and private prompt rules must hold for all of them.
 - **What it led to:** The rules moved to `AGENTS.md`, the file most assistants read by default. `CLAUDE.md`, `GEMINI.md` and `.github/copilot-instructions.md` only point to it, so there is one copy to maintain. The prompt export reads Codex's session history as well as Claude Code's, and has an `--add` option so any other assistant can record prompts itself.
 - **Alternatives:** A full copy of the rules in each tool's own file (they would drift apart).
-- **Commits:** not yet committed
+- **Commits:** `27da0a0` Turn Abyssal Garden into Shipwreck Explorer: the Titanic wreck
 
 ## D009: Publish as a public repository
 
@@ -90,4 +90,4 @@ How to add an entry is in [`AGENTS.md`](../AGENTS.md).
 - **Decision:** Commit the work and publish it as a public repository on GitHub, under the Optional account.
 - **Why:** A community-driven project needs a public home where people can read the sources log, the decisions and the code, and contribute.
 - **What it led to:** The repository `optional-org/shipwreck-explorer`. The upstream Abyssal Garden history is kept underneath this project's commits.
-- **Commits:** not yet committed
+- **Commits:** `27da0a0` Turn Abyssal Garden into Shipwreck Explorer: the Titanic wreck
