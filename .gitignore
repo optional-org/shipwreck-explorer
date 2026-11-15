@@ -1,2 +1,13 @@
 node_modules/
-dev.html
+
+# Reference material is kept locally and not committed. What it is, where it came from and where it is used
+# is logged in docs/SOURCES.md.
+reference/*
+!reference/README.md
+
+# The exact prompts each contributor typed, and the verbatim decision records made from them, stay on that
+# contributor's machine. The committed record of the reasoning is docs/DECISIONS.md.
+docs/prompts.jsonl
+docs/PROMPTS.md
+docs/decisions/
+__pycache__/

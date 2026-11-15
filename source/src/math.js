@@ -51,9 +51,11 @@ const qFromY = (nx, ny, nz) => {
 };
 
 // world grid
-const NX = 512, NY = 80, NZ = 512, VS = 0.75, OX = -192, OY = -56, OZ = -192;
-const CELLS = 16, CELLW = 24; // culling grid over XZ
-const NCHUNK = 7; // 3 small + 3 large rock chunk meshes + pebbles
+// 1152 m square, 60 m tall: wide enough for both hull sections at their true distance. y = 0 is the seabed datum.
+const NX = 768, NY = 40, NZ = 768, VS = 1.5, OX = -576, OY = -27, OZ = -576;
+const CELLS = 16, CELLW = 72; // culling grid over XZ
+const REACH = 500; // how far from the centre the camera may go
+const MAPN = 1024; // ground map resolution
 
 // ---------------------------------------------------------------- naive surface nets
 // D: scalar field (>0 inside), dims nx,ny,nz. Returns grid-space positions + triangle indices.

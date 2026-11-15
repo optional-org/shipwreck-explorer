@@ -1,12 +1,11 @@
 {
-  "name": "abyssal-garden",
+  "name": "shipwreck-explorer",
   "private": true,
-  "description": "A procedural underwater world rendered with WebGPU, bundled into one HTML file",
+  "description": "An explorable model of the Titanic wreck site rendered with WebGPU, bundled into one HTML file",
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
-    "build:readable": "node build.mjs --readable",
-    "build:dev": "node build.mjs --dev"
+    "build:readable": "node build.mjs --readable"
   },
   "devDependencies": {
     "esbuild": "^0.28.2"
